@@ -1,7 +1,7 @@
 # Ubuntu 24.04 + public gsm. SeedLink only. Pin SEISCOMP_VERSION for replayable builds.
 # Unofficial. Not gempa-supported.
 
-FROM ubuntu:24.04
+FROM ubuntu:24.10
 
 ARG SEISCOMP_VERSION=7.3.1
 ARG DEBIAN_FRONTEND=noninteractive

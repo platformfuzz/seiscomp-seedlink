@@ -19,8 +19,6 @@ Buffer files live under `/home/sysop/seiscomp/var/lib/seedlink`. Mount that path
 
 ## Build
 
-SeisComP is pinned in the Dockerfile as `ARG SEISCOMP_VERSION=7.3.1`. Override at build time with `--build-arg` if needed.
-
 ```bash
 docker build -t seiscomp-seedlink:test .
 docker run --rm -p 18000:18000 seiscomp-seedlink:test

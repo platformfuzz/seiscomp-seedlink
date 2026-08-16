@@ -6,6 +6,10 @@ export PATH="$SEISCOMP_ROOT/bin:$PATH"
 
 mkdir -p "$SEISCOMP_ROOT/var/run"
 
+if [ -f /docker/apply-station-set.py ]; then
+  python3 /docker/apply-station-set.py
+fi
+
 host="${SEEDLINK_UPSTREAM_HOST:-geofon.gfz.de}"
 port="${SEEDLINK_UPSTREAM_PORT:-18000}"
 profile="$SEISCOMP_ROOT/etc/key/seedlink/profile_geofon"

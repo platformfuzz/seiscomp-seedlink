@@ -1,5 +1,8 @@
 # seiscomp-seedlink
 
+![CI](https://github.com/platformfuzz/seiscomp-seedlink/actions/workflows/ci.yml/badge.svg)
+![Build and Release](https://github.com/platformfuzz/seiscomp-seedlink/actions/workflows/build-and-release.yml/badge.svg)
+
 Unofficial SeisComP SeedLink image built with public gsm. Not gempa-supported.
 
 Default feed is GEOFON BH for stations WLF STU MORC RGN. Listens on TCP 18000.

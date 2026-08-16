@@ -14,7 +14,4 @@ jobs:
       contents: write
       packages: write
     uses: actionsforge/actions/.github/workflows/docker-image-release.yml@main
-    with:
-      build-args: |
-        SEISCOMP_VERSION=${{ vars.SEISCOMP_VERSION }}
     secrets: inherit

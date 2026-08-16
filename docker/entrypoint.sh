@@ -7,10 +7,11 @@ export LD_LIBRARY_PATH="$SEISCOMP_ROOT/lib${LD_LIBRARY_PATH:+:$LD_LIBRARY_PATH}"
 export PYTHONPATH="$SEISCOMP_ROOT/lib/python${PYTHONPATH:+:$PYTHONPATH}"
 
 if [ "$(id -u)" = 0 ]; then
-  mkdir -p "$SEISCOMP_ROOT/var/lib/seedlink" /home/sysop/.seiscomp
-  chown -R sysop:sysop "$SEISCOMP_ROOT/var/lib/seedlink" /home/sysop/.seiscomp \
+  mkdir -p "$SEISCOMP_ROOT/var/run" "$SEISCOMP_ROOT/var/lib/seedlink" /home/sysop/.seiscomp
+  chown -R sysop:sysop "$SEISCOMP_ROOT/var/run" "$SEISCOMP_ROOT/var/lib/seedlink" /home/sysop/.seiscomp \
     2>/dev/null || true
   exec runuser -u sysop -- "$0" "$@"
 fi
 
+mkdir -p "$SEISCOMP_ROOT/var/run"
 exec "$@"

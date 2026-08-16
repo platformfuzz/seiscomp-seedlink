@@ -4,6 +4,8 @@ set -euo pipefail
 export SEISCOMP_ROOT="${SEISCOMP_ROOT:-/home/sysop/seiscomp}"
 export PATH="$SEISCOMP_ROOT/bin:$PATH"
 
+mkdir -p "$SEISCOMP_ROOT/var/run"
+
 host="${SEEDLINK_UPSTREAM_HOST:-geofon.gfz.de}"
 port="${SEEDLINK_UPSTREAM_PORT:-18000}"
 profile="$SEISCOMP_ROOT/etc/key/seedlink/profile_geofon"
